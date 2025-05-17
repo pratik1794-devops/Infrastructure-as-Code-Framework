@@ -1,0 +1,20 @@
+Deployment Workflow
+Initialize the backend:
+
+bash
+cd terraform/accounts/dev/
+terraform init
+Plan and apply environment:
+
+bash
+cd ../../environments/dev/
+terraform init
+terraform plan
+terraform apply
+Promote to staging/prod:
+
+bash
+cd ../staging/
+terraform init
+terraform plan
+terraform apply

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IaC Framework - Terraform Deployment</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Infrastructure as Code Framework</h1>
+        <p>Standardized deployments across AWS accounts and environments</p>
+    </header>
+
+    <div class="container">
+        <section class="account-selection">
+            <h2>Select AWS Account</h2>
+            <select id="awsAccount">
+                <option value="">-- Select Account --</option>
+                <option value="dev">Development</option>
+                <option value="staging">Staging</option>
+                <option value="prod">Production</option>
+            </select>
+        </section>
+
+        <section class="environment-selection">
+            <h2>Select Environment</h2>
+            <select id="environment">
+                <option value="">-- Select Environment --</option>
+                <option value="us-east-1">US East (N. Virginia)</option>
+                <option value="us-west-2">US West (Oregon)</option>
+                <option value="eu-west-1">EU (Ireland)</option>
+            </select>
+        </section>
+
+        <section class="module-selection">
+            <h2>Select Terraform Modules</h2>
+            <div class="module-grid" id="moduleGrid">
+                <!-- Dynamically populated by JavaScript -->
+            </div>
+        </section>
+
+        <section class="variables-config">
+            <h2>Module Variables</h2>
+            <div id="variablesForm">
+                <!-- Dynamically generated based on selected modules -->
+            </div>
+        </section>
+
+        <section class="actions">
+            <button id="planBtn">Generate Terraform Plan</button>
+            <button id="applyBtn" disabled>Apply Configuration</button>
+            <button id="destroyBtn" disabled>Destroy Resources</button>
+        </section>
+
+        <section class="output">
+            <h2>Execution Output</h2>
+            <pre id="outputLog"></pre>
+        </section>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
